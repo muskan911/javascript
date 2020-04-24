@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function FindAllMethods(obj)
+        {
+            return Object.getOwnPropertyNames(obj).filter(function(property) 
+            {
+                return typeof obj[property] == "function";
+            });
+        } 
+        document.write(FindAllMethods(Math)+"<br><br>");
+        document.write(FindAllMethods(Array)+"<br><br>");
+        function all_properties(obj) 
+        {
+            return Object.getOwnPropertyNames(obj);
+        }
+        document.write(all_properties(Math)+"<br><br>");
+        document.write(all_properties(Array)+"<br><br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      function changeToRed() {
+        document.getElementById("p1").style.background = "red";
+        document.getElementById("p2").style.background = "red";
+        document.getElementById("p3").style.background = "red";
+      }
+
+      function changeToBlue() {
+        document.getElementById("p1").style.background = "blue";
+        document.getElementById("p2").style.background = "blue";
+        document.getElementById("p3").style.background = "blue";
+      }
+
+      function changeToPink() {
+        document.getElementById("p1").style.background = "pink";
+        document.getElementById("p2").style.background = "pink";
+        document.getElementById("p3").style.background = "pink";
+      }
+    </script>
+  </head>
+  <body>
+    <p style="background-color: green;" id="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam itaque
+      tempore pariatur exercitationem, debitis veritatis corporis quam eligendi
+      incidunt, possimus sunt! Odit fugit fuga soluta quas iusto saepe qui et!
+    </p>
+    <p style="background-color: green;" id="p2">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt est enim
+      asperiores fugit, provident voluptas obcaecati vel corrupti blanditiis
+      fugiat perferendis incidunt doloribus, numquam quam recusandae maiores non
+      expedita vitae.
+    </p>
+    <p style="background-color: green;" id="p3">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+      perferendis facilis, animi quas hic voluptates consequatur obcaecati illo,
+      architecto assumenda incidunt quidem inventore magnam laboriosam numquam
+      ab officia accusantium odio.
+    </p>
+
+    <p>
+      <input type="button" onclick="changeToRed()" value="Change to red" />
+    </p>
+
+    <p>
+      <input type="button" onclick="changeToBlue()" value="Change to blue" />
+    </p>
+
+    <p>
+      <input type="button" onclick="changeToPink()" value="Change to pink" />
+    </p>
+  </body>
+</html>

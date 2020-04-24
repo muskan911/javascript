@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+
+<div class="game">
+
+    <script>
+        var userChoice = prompt("Choose rock, paper or scissors?");
+
+        if (! userChoice) {
+            document.write("<p>Player 1,  Refresh this screen.</p>");
+        } else {
+            document.write("<p>Player 1:" + " " + userChoice + "</p>");
+        }
+
+        var computerChoice = Math.random();
+        if (computerChoice < 0.34) {
+            computerChoice = "rock"; 
+        } else if(computerChoice <= 0.67) {
+            computerChoice = "paper";
+        } else {
+            computerChoice = "scissors";
+        }
+
+        
+        document.write("<p>Computer:" + " " + computerChoice + "</p>");
+
+        
+        var compare = function(choice1,choice2) {
+            if (choice1 === choice2) {
+                return "It's a tie!";
+            }
+            if (choice1 === "rock") {
+                if (choice2 === "scissors") {
+                    
+                    return "You wins!";
+                } else {
+            
+                    return "You lose! Try again.";
+                }
+            }
+            if (choice1 === "paper") {
+                if (choice2 === "rock") {
+                    
+                    return "You win!";
+                } else {
+                    return "You lose! Try again.";
+                }
+            }
+            if (choice1 === "scissors") {
+                if (choice2 === "rock") {
+                    return "You lose! Try again.";
+                }
+                 else {
+                    return "You win!";
+                }
+            }
+        };
+
+        var results = compare(userChoice,computerChoice);
+
+        document.write("<br>" + results);
+    </script>
+
+</div>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="60">Score is:<br>0:0</h1>
+    <h2>Select any one of the three:</h2>
+    <a href="#"><img id="2" src="scott-webb-xgAcJZRk9_8-unsplash.jpg" style="height: 200px; width: 200px;" onclick="random(1,3)"></a>
+    <a href="#"><img id="3" src="brandi-redd-aJTiW00qqtI-unsplash.jpg" style="height: 200px; width: 200px;" onclick="random1(1,3)"></a>
+    <a href="#"><img id="4" src="tessa-wilson-vslzoHxSMRo-unsplash.jpg" style="height: 200px; width: 200px;" onclick="random2(1,3)"></a>
+    <br><br>
+    <h1 id="60"></h1>
+    <script>
+        var count=0;
+        var oppcount=0;
+        function random(min,max){
+            s=1;
+            r=Math.floor(Math.random() * (max - min + 1) ) + min;
+            var x = document.createElement("IMG");
+            x.id="1";
+            x.setAttribute("width", "200");
+            x.setAttribute("height", "200");
+            x.setAttribute("alt", "The Pulpit Rock");
+            if(r==1){
+                x.setAttribute("src", "scott-webb-xgAcJZRk9_8-unsplash.jpg");
+                document.body.appendChild(x);
+                hideimage();
+            }
+            else if(r==2){
+                x.setAttribute("src", "brandi-redd-aJTiW00qqtI-unsplash.jpg");
+                document.body.appendChild(x);
+                hideimage();
+            }
+            else{
+                x.setAttribute("src", "tessa-wilson-vslzoHxSMRo-unsplash.jpg");
+                document.body.appendChild(x);
+                hideimage();
+            }
+            hideimage();
+        }
+        function random1(min,max){
+            s=2;
+            r=Math.floor(Math.random() * (max - min + 1) ) + min;
+            var x = document.createElement("IMG");
+            x.id="1";
+            x.setAttribute("width", "200");
+            x.setAttribute("height", "200");
+            x.setAttribute("alt", "The Pulpit Rock");
+            if(r==1){
+                x.setAttribute("src", "scott-webb-xgAcJZRk9_8-unsplash.jpg");
+                document.body.appendChild(x);
+                hideimage();
+            }
+            else if(r==2){
+                x.setAttribute("src", "brandi-redd-aJTiW00qqtI-unsplash.jpg");
+                document.body.appendChild(x);
+                hideimage();
+            }
+            else{
+                x.setAttribute("src", "tessa-wilson-vslzoHxSMRo-unsplash.jpg");
+                document.body.appendChild(x);
+                hideimage();
+            }
+            hideimage();
+        }
+        function random2(min,max){
+            s=3;
+            r=Math.floor(Math.random() * (max - min + 1) ) + min;
+            var x = document.createElement("IMG");
+            x.id="1";
+            x.setAttribute("width", "200");
+            x.setAttribute("height", "200");
+            x.setAttribute("alt", "The Pulpit Rock");
+            if(r==1){
+                x.setAttribute("src", "scott-webb-xgAcJZRk9_8-unsplash.jpg");
+                document.body.appendChild(x);
+                hideimage();
+            }
+            else if(r==2){
+                x.setAttribute("src", "brandi-redd-aJTiW00qqtI-unsplash.jpg");
+                document.body.appendChild(x);
+                hideimage();
+            }
+            else{
+                x.setAttribute("src", "tessa-wilson-vslzoHxSMRo-unsplash.jpg");
+                document.body.appendChild(x);
+                hideimage();
+            }
+            hideimage();
+        }
+        function hideimage(){
+            setTimeout(doHide,3000);
+        }
+        function doHide(){
+            var a=document.getElementById("1");
+            a.remove();
+            increase();
+        }
+        function increase(){
+            if(s==1&&r==2){
+                oppcount++;
+            }
+            else if(s==1&&r==3){
+                count++;
+            }
+            else if(s==2&&r==1){
+                count++;
+            }
+            else if(s==2&&r==3){
+                oppcount++;
+            }
+            else if(s==3&&r==1){
+                oppcount++;
+            }
+            else if(s==3&&r==2){
+                count++;
+            }
+            else{
+            }
+            document.getElementById("60").innerHTML="Score is:<br>"+count+":"+oppcount;
+        }
+    </script>
+</body>
+</html> -->

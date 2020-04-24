@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="#" onMouseOver="highlight()" onMouseOut="return_normal()">
+        Put mouse here to see bold words</a>]</p> 
+<p><b>Hello world </b>this a para with <b>bold letters</b></p>
+<script>
+var bold_Items;
+window.onload = getBold_items();
+function getBold_items() 
+{
+bold_Items = document.getElementsByTagName('b'); 
+}
+function highlight() 
+{
+ for (var i=0; i<bold_Items.length; i++)
+ {                                                    
+  bold_Items[i].style.color = "red";
+  }
+}
+function return_normal()
+{
+for (var i=0; i<bold_Items.length; i++) 
+{
+     bold_Items[i].style.color = "black";
+}
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div id="textbox">
+            <input type="text" value="item 1">
+            <input type="text" value="item 2">
+            <input type="text" value="item 3">
+            <input type="text" value="item 4">
+        </div>
+        <button onclick="additem()">add item</button>
+        <button onclick="removeitem()">delete item</button>
+    </form>
+    <script>
+        function additem() {
+            var x = document.getElementById("textbox");
+            var option = document.createElement("input");
+            option.text = "new item";
+            x.add(option);
+        }
+        function removeitem() {
+            document.getElementById("textbox").remove(0);
+
+        }
+    </script>
+</body>
+
+</html>

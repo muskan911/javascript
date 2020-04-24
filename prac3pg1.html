@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text1" placeholder="Enter name">
+    <script>
+    function fn1()
+    {
+        var str=document.getElementById("text1").value;
+    for(var i=0;i<str.length;i++)
+    {
+        if((str.charAt(i)>='a'&&str.charAt(i)<='z')||(str.charAt(i)>='A'&&str.charAt(i)<='Z')||str.charAt(i)==' ')
+        {}
+        else
+        {alert("You entered wrong name.....");}
+    }}
+    function fn2()
+    {
+        var str=document.getElementById("t2").value;
+        str=parseInt(str);
+       if(str>=1&&str<=100)
+        {}
+        else
+        {alert("You entered wrong age.....");}
+    }
+    function fn3()
+    {
+        var str=document.getElementById("t3").value;
+        var lemail_id="";
+        for(var i=0;i<str.length;i++)
+
+            {
+                if(str.charAt(i)=='@')
+                {
+                    lemail_id=substring(str.indexOf('@'), str.length());
+                    break;
+                }
+            }
+            if(lemail_id.equals("@gmail.com"))
+            {
+            }
+            else{
+                alert("You entered wrong mail id....");
+            }
+    }
+    </script>
+    <br><br>
+    <button onclick="fn1()" id="btn1">Click me!</button><br><br>
+    <input type="number" id="t2" placeholder="Enter age"><br><br>
+    <button onclick="fn2()" id="btn2">Click me!</button><br><br>
+    <input type="text" id="t3" placeholder="Enter email id"><br><br>
+    <button onclick="fn3()" id="btn3">Click me!</button><br><br>
+</body>
+</html>

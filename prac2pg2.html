@@ -1,0 +1,24 @@
+<!-- write suitable js to illustrate the usage of arrow function-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var sum = (a,b)=>
+         {
+             var c=a+b;
+             return c;
+         }
+        </script>
+</head>
+<body>
+    <script>   
+    var a1=parseInt(prompt("Enter value of a:"));
+    var b1=parseInt(prompt("Enter value of b:"));
+    document.write("the sum of a and b is"+sum(a1,b1));
+</script>
+</body>
+</html>

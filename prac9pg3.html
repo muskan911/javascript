@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="Language" id="Language">
+        <option value="Choices">Enter Your Choice</option>
+        <option value="Java">Java</option>
+        <option value="C++">C++</option>
+        <option value="C">C</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="JavaScript">JavaScript</option>
+
+    </select>
+    <input type="button" value="Submit" onclick="check()">
+
+    <script>
+        function check(){
+            let y = document.querySelectorAll('option');
+            
+            for(i=0;i<y.length;++i){
+            for(j=1;j<y.length;++j){
+            if(y[i].value == y[j].value) console.log(y[i].value);
+            }
+            }
+        }
+    </script>
+</body>
+</html>

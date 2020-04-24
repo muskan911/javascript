@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function multiply(){
+        a=document.getElementById("firstnumber").value
+        b=document.getElementById("secondnumber").value
+        document.getElementById("result").innerHTML=a*b;
+    }
+    function division(){
+        a=document.getElementById("firstnumber").value
+        b=document.getElementById("secondnumber").value
+        document.getElementById("result").innerHTML=a/b;
+    }
+    </script>
+    FIRSTNUMBER:<input type="number" id="firstnumber"/><br>
+    SECONDNUMBER:<input type="number" id="secondnumber"/><br>
+    <button onclick="multiply()" >Multiply</button>
+    <button onclick="division()" >Division</button> 
+    <p>RESULT:
+        <span id="result"></span>
+    </p>   
+</body>
+</html>

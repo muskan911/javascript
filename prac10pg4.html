@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <ui id="list">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+        </ui>
+        <button onclick="additem()">add item</button>
+        <button onclick="removeitem()">delete item</button>
+    </form>
+    <script>
+        function additem() {
+            var x = document.getElementById("list");
+            var option = document.createElement("li");
+            option.text = "new item";
+            x.add(option);
+        }
+        function removeitem() {
+            document.getElementById("list").remove(0);
+
+        }
+    </script>
+</body>
+
+</html>

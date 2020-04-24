@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function add()
+        {
+             num1=document.getElementById("text1").value
+             num2=document.getElementById("text2").value
+             c=a+b
+        }
+        function call(add){
+            document.getElementById("result").innerHTML=c;
+        }
+
+    </script>
+    FIRSTNUMBER: <input type="number" id="text1"/><br>
+    SECONDNUMBER:<input type="number" id="text2"/><br>
+    <button onclick="call()" >ADD</button>
+    <p>RESULT:
+        <span id="result"></span>
+    </p>   
+</body>
+</html>

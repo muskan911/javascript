@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let http = new XMLHttpRequest();
+		http.open('POST', 'https://jsonplaceholder.typicode.com/todos/1');
+		http.onload = function() {
+			let headers = http.getAllResponseHeaders();
+			document.write(headers);
+		};
+		http.send();
+	</script>
+</body>
+</html>

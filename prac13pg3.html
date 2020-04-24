@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>tax calculator</title>
+	<style>
+		.err {
+			color: red;
+		}
+		#tax {
+			color: royalblue;
+		}
+	</style>
+</head>
+<body>
+	<form action="#">
+		<table>
+			<tr>
+				<td>Id:</td>
+				<td><input type="number" id="id"></td>
+				<td id="idErr" class="err"></td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" id="name"></td>
+				<td id="nameErr" class="err"></td>
+			</tr>
+			<tr>
+				<td>Gross Salary:</td>
+				<td><input type="text" id="salary"></td>
+				<td id="salaryErr" class="err"></td>
+			</tr>
+			<tr>
+				<td>Total Savings:</td>
+				<td><input type="text" id="savings"></td>
+				<td id="savingsErr" class="err"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button id="btn">Calculate Tax</button></td>
+				<td id="tax"></td>
+			</tr>
+		</table>
+	</form>
+	<script>
+		let btn = document.getElementById("btn");
+		btn.addEventListener("click", validate);
+
+		function taxCalculator(salary, savings) {
+			let taxableIncome = salary - savings;
+			let tax = 0;
+			if(taxableIncome <= 100000) {
+				tax = 0;
+			}
+			else if(taxableIncome > 100000 && taxableIncome <= 200000) {
+				tax = 1/10*(taxableIncome - 100000);
+			}
+			else if(taxableIncome > 200000 && taxableIncome <= 500000) {
+				tax = 1/10*(taxableIncome - 100000) + 								2/10*(taxableIncome);
+			}
+			document.getElementById("tax").innerHTML = "Tax is " + tax;
+		}
+
+		function validate() {
+			let id = document.getElementById("id").value;
+			let name = document.getElementById("name").value;
+			let salary = document.getElementById("salary").value;
+			let savings = document.getElementById("savings").value;
+			let idErr = nameErr = salaryErr = savingsErr = true;
+
+			if(id == "") {
+				printError("idErr", "Please enter your id");
+			} else {
+				printError("idErr", "");
+				idErr = false;
+			}
+
+			if (name == "") {
+				printError("nameErr", "Please enter your name");
+			} else {
+				var regex = /^[a-zA-Z\s]+$/;
+				if (regex.test(name) === false) {
+					printError("nameErr", "Please enter a valid name");
+				} else {
+					printError("nameErr", "");
+					nameErr = false;
+				}
+			}
+
+			if (salary == "") {
+				printError("salaryErr", "Please enter salary");
+			} else {
+				var regex = /^[0-9]*$/;
+				if (regex.test(salary) === false) {
+					printError("salaryErr", "Please enter a valid 						salary");
+				} else {
+					printError("salaryErr", "");
+					salaryErr = false;
+				}
+			}
+
+			if (savings == "") {
+				printError("savingsErr", "Please enter your savings");
+			} else {
+				var regex = /^[0-9]*$/;
+				if (regex.test(savings) === false) {
+					printError("savingsErr", "Please enter a valid 						savings ammount");
+				} else {
+					printError("savingsErr", "");
+					savingsErr = false;
+				}
+			}
+
+			if((idErr || nameErr || salaryErr || savingsErr) == true) {
+				console.log("error")
+			}
+			else {
+				taxCalculator(parseInt(salary), parseInt(savings));
+			}
+		}
+
+			function printError(elemId, hintMsg) {
+			document.getElementById(elemId).innerHTML = hintMsg;
+		}
+	</script>
+</body>
+</html>
