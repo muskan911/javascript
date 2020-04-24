@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="1">ONE
+    <div id="2">TWO
+    <div id="3">THREE</div>
+   </div>
+  </div>
+  <script>
+      var d1= document.getElementById("1");
+      var d2= document.getElementById("2");
+      var d3= document.getElementById("3");
+      d1.addEventListener("click",fun1);
+      d2.addEventListener("click",fun2);
+      d3.addEventListener("click",fun3);
+    // bubling
+    //  d1.addEventListener("click",fun1,true);
+    //   d2.addEventListener("click",fun2,true);
+    //   d3.addEventListener("click",fun3,true);
+
+      function fun1(){
+          console.log("one")
+      }
+      function fun2(){
+          console.log("two")
+      }
+      function fun3(){
+          console.log("three")
+      }
+
+  </script>
+</body>
+</html>
+<!--  explore the usage of stopPropogation(), stopImmediatePropogation() -->

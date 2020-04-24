@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="id2">
+        <ul id="id7">
+            <li>Orange</li>
+            <li>Mango</li>
+            <li>Pear</li>
+            <li>Apple</li>
+        </ul>
+    </div>
+    <p id="id1" class="class1" title="This is a paragraph">Para1</p>
+    <p class="class1 class 2">Para2</p>
+    <p id="id5">Para3</p>
+    <p>Para4</p>
+    <script>
+        // var mydiv=document.getElementById("id2");
+        // var l=mydiv.querySelectorAll("*");
+        // var l= document.querySelectorAll("p");
+        // var l=document.querySelector("p");
+        // var l=document.querySelectorAll(".class1, .class2");
+        // var l=document.querySelectorAll("p.class2")
+        var l = document.querySelectorAll('p[title="My"]');
+        console.log(l);
+    </script>
+</body>
+
+</html>

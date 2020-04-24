@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1" onclick="fun2()">
+        hello
+        <div id="div2" onclick="fun1(event)">
+            world
+        </div>
+    </div>
+
+    <br>
+    <input type="checkbox" id="c">
+    Stop propagation:
+
+    <script>
+        function fun1(event) {
+            confirm("Inner div is clicked");
+            if (document.getElementById("c").checked) {
+                event.stopPropagation();
+            }
+        }
+        function fun2() {
+            confirm("Outer div is clicked");
+        } 
+    </script>
+</body>
+
+</html>

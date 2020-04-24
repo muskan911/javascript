@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    enter string: <input type="text" id="str">
+    <button type="submit" onclick="check()">sumbit</button>
+    <script>
+    function check(){
+        
+        var s= document.getElementById("str");
+        alert(s)
+        var reversed= s.split("").reverse().join("");
+        if( s== reversed)
+        return alert("palindrome")
+        else
+        return alert("not a palindrome")
+    }
+    </script>
+</body>
+</html>

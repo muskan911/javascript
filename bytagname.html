@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>ghhthfdbdxdsgrsdrthjfvhkkjb</p>
+    <p>hgyfmhgjjgjg,jffgftgtgjg</p>
+    <p>resyyyyyyyyyyyyyyyyyyyyjn</p>
+    <p>yyyyyyyyyyyyyyyyuf,,,,,,,,er</p>
+    <p>tudryesaesyesryxryd,hutdj.gcyfi..</p>
+    <button onclick="changeColorAll()">Change all paragraph color</button>
+    <button onclick="changeColor()">Change particular paragraph color</button>
+    <script>
+        function changeColorAll() {
+            var y = document.getElementsByTagName("p");
+            //alert("length = " + y.length);
+            for(var i = 0; i<y.length; i++) {
+                y[i].style.backgroundColor = "aqua";
+            }
+            
+        }
+        function changeColor() {
+            var x = document.getElementsByTagName("p");
+            x[2].style.backgroundColor = "purple";
+        }
+    </script>
+</body>
+</html>

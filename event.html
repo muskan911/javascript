@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        this is a para
+    </p>
+    <button id="id1">Press</button>
+    <script>
+        var x = document.getElementById("id1");
+        x.addEventListener("click",first);
+        x.addEventListener("click",second);
+        function first(){
+            alert("function1");
+        }
+        function second(){
+            alert("function2");
+        }
+    </script>
+</body>
+</html>

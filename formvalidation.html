@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" name = "myForm" onsubmit = "return(validate());">
+        <table>
+            <tr>
+                <td align="right">Name</td>
+                <td><input type="text" name="Name" /></td>
+            </tr>
+            <tr>
+                <td align="right">EMail</td>
+                <td><input type="text" name="EMail" /></td>
+            </tr>
+
+            <tr>
+                <td align="right">Zip Code</td>
+                <td><input type="text" name="Zip" /></td>
+            </tr>
+
+            <tr>
+                <td align="right">Country</td>
+                <td> <select name="country">
+                        <option selected="" value="Default">Choose yours</option>
+                        <option value="1">Australia</option>
+                        <option value="2">Canada</option>
+                        <option value="3">India</option>
+                        <option value="4">Russia</option>
+                        <option value="5">USA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function validate() {
+            // var a = document.form.Name.value;
+            // var b = document.form.EMail.value;
+            // var c = document.form.Zip.value;
+            // var d = document.form.Country.value;
+
+            if (document.myForm.Name.value == "") {
+                alert("Please provide your name!");
+                document.myForm.Name.focus();
+                return false;
+            }
+            if (document.myForm.EMail.value == "") {
+                alert("Please provide your Email!");
+                document.myForm.EMail.focus();
+                return false;
+            }
+            if (document.myForm.Zip.value == "" || isNaN(document.myForm.Zip.value) ||
+                document.myForm.Zip.value.length != 5) {
+
+                alert("Please provide a zip in the format #####.");
+                document.myForm.Zip.focus();
+                return false;
+            }
+            if (document.myForm.Country.value == "-1") {
+                alert("Please provide your country!");
+                return false;
+            }
+            return (true);
+        }
+    </script>
+</body>
+
+</html>
